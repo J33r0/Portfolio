@@ -1,7 +1,17 @@
+:root {
+    --decoration-color: #abca97;
+    --decoration-color-bg: color-mix(in srgb, var(--decoration-color), rgba(255, 255, 255, 0.1));
+
+    --sm: 960;
+}
+
+
 html {
+    font-family: 'Courier New', Courier, monospace;
 
     body {
         margin: 0 0;
+        /*background-color: #121212;*/
 
         nav {
             display: flex;

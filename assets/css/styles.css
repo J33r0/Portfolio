@@ -11,12 +11,14 @@ html {
 
     body {
         margin: 0 0;
-        /*background-color: #121212;*/
+        background-color: #121212;
+        color: white;
 
         nav {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            margin: 0px 16px;
 
             a {
 
@@ -26,7 +28,17 @@ html {
             }
 
             section {
-                
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    list-style: none;
+
+                }
 
                 button {
                     width: 20px;
@@ -36,10 +48,11 @@ html {
 
                     svg {
                         width: 40px;
+                        color: grey
                     }
 
                     svg:hover {
-                        color: grey;
+                        color: #292929;
                         cursor: pointer;
                     }
                 }

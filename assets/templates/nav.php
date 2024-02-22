@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <title>Jeronimo Herdoiza</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
-</head>
-<body>
-    <nav>
+<nav>
         <a href="/" title="Go to home page">
             <img src="assets/img/image2vector.svg" alt="logo" aria-hidden="true"/>
         </a>
 
-        <h1>Portfolio</h1>
+        <div></div>
 
         <section>
             <button onclick="location.reload()">
@@ -31,46 +21,20 @@
                     </g>
                 </svg>
             </button>
-        </section>
-    </nav>
 
-    <main>
-        <section>
-            <h1>I'm Jeronimo Herdoiza</h1>
-            <h2>A future Engineer and Developper</h2>
-            <h3>I'm studying but the "stu" is silent</h3>
-        </section>
-
-        <section>
             <ul>
                 <a href="/">
                     <li>Home</li>
                 </a>
-                <a href="projects.html">
+                <a href="Projects">
                     <li>Projects</li>
                 </a>
-                <a href="aboutme.html">
+                <a href="aboutme.php">
                     <li>About Me</li>
                 </a>
-                <a href="contact.html">
-                    <li>Contact</li>
+                <a href="contact.php">
+                    <li>Contact Me</li>
                 </a>
             </ul>
         </section>
-    </main>
-
-    <footer>
-        <section>
-            <h6>Social Media</h6>
-            <ul>
-                <a href="">
-                    <li>GitHub</li>
-                </a>
-                <a href="">
-                    <li>Email</li>
-                </a>
-            </ul>
-        </section>
-    </footer>
-</body>
-</html>
+    </nav>

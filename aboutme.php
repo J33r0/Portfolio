@@ -8,6 +8,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
 </head>
 <body>
-    
+    <?php include "assets/templates/nav.php";?>
+
+    <main>
+        
+    </main>
+
+    <?php include "assets/templates/footer.php";?>
 </body>
 </html>

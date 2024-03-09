@@ -9,5 +9,11 @@
 </head>
 <body>
     <?php include "assets/templates/nav.php";?>
+
+    <main>
+        
+    </main>
+
+    <?php include "assets/templates/footer.php";?>
 </body>
 </html>

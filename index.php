@@ -6,35 +6,35 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Jeronimo Herdoiza</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
+    <script src="assets/js/script.js" type="module"></script>
 </head>
 <body>
     <?php include "assets/templates/nav.php";?>
 
     <main>
         <section>
-            <h1>I'm Jeronimo Herdoiza</h1>
-            <h2>A future Engineer and Developper</h2>
-            <h3>I'm studying but the "stu" is silent</h3>
+            <h1>I'm <span>Jeronimo Herdoiza</span></h1>
+            <h1>A future Engineer and Developper</h1>
         </section>
 
-        <section>
-            <ul>
-                <a href="/">
-                    <li>Home</li>
-                </a>
-                <a href="projects.php">
-                    <li>Projects</li>
-                </a>
-                <a href="aboutme.php">
-                    <li>About Me</li>
-                </a>
-                <a href="contact.php">
-                    <li>Contact</li>
-                </a>
-            </ul>
+        <section id="projects">
+            <div></div>
+            <article></article>
+            <article></article>
+            <div></div>
+            <div></div>
+            <article></article>
+            <article></article>
+            <div></div>
+        </section>
+
+        <section id="aboutme">
+            <h2>About Me</h2>
+            <p>test</p>
         </section>
     </main>
 
+    <?php require_once "assets/templates/footer.php";?>
     
 </body>
 </html>

@@ -26,10 +26,10 @@
                 <a href="/">
                     <li>Home</li>
                 </a>
-                <a href="Projects">
+                <a href="/#projects">
                     <li>Projects</li>
                 </a>
-                <a href="aboutme.php">
+                <a href="/#aboutme">
                     <li>About Me</li>
                 </a>
                 <a href="contact.php">

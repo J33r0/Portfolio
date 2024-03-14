@@ -8,12 +8,15 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
 </head>
 <body>
-    <?php include "assets/templates/nav.php";?>
+    <?php require_once "assets/templates/nav.php";?>
 
     <main>
         <form action="assets/php/form.php" method="post" >
-            <label for="user_name">Your name:</label>
-            <input type="text" id="user_name" name="username"/>
+            <label for="user_fname">Your first name:</label>
+            <input type="text" id="user_fname" name="user_fname"/>
+
+            <label for="user_lname">Your last name:</label>
+            <input type="text" id="user_lname" name="user_lname"/>
 
             <label for="email">Your e-mail:</label>
             <input type="email" id="email" name="email"/>
@@ -25,19 +28,16 @@
         </form>
 
         <?php
-        $pdo = new PDO("sqlite:" . __DIR__ . "/assets/php/database.sqlite");
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $commentObj = new Comment();
+        $obj = $commentObj->getComment(); 
 
-        $comments = $pdo->query("SELECT * FROM message")
-                        ->fetchAll();
-
-        foreach ($comments as $comment) {
+        foreach ($obj as $comment) {
             ?>
         <article>
         <ul>
             <li><?php echo $comment['id'] ?></li>
-            <li><?= $comment['username'] ?></li>
+            <li><?= $comment['user_fname'] ?></li>
+            <li><?= $comment['user_lname'] ?></li>
             <li><?= $comment['email'] ?></li>
             <li><?= $comment['message'] ?></li>
         </ul>
@@ -45,7 +45,8 @@
         <?php
         }
         ?>
-
     </main>
+
+    <?php require_once "assets/templates/footer.php";?>
 </body>
 </html>

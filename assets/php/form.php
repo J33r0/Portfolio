@@ -1,25 +1,15 @@
 <?php
+require_once './Comment.php';
 
-$username = htmlspecialchars($_POST['username']);
+$user_fname = htmlspecialchars($_POST['user_fname']);
+$user_lname = htmlspecialchars($_POST['user_lname']);
 $email = htmlspecialchars($_POST['email']);
 $message = htmlspecialchars($_POST['message']);
 
 
-if ($message !== '' && $username !== '' && strlen($username) < 100) {
-    $pdo = new PDO("sqlite:" . __DIR__ . "/database.sqlite");
-
-    $pdo->query('CREATE TABLE IF NOT EXISTS message (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username VARCHAR(100) NOT NULL,
-        email VARCHAR(100) NOT NULL,
-        message TEXT
-    )');
-
-    $stmt = $pdo->prepare("INSERT INTO message ('username', 'email', 'message') VALUES (:username, :email, :message)");
-    $stmt->bindvalue(':username', $username);
-    $stmt->bindvalue(':email', $email);
-    $stmt->bindvalue(':message', $message);
-    $stmt->execute();
+if ($message !== '' && $user_fname !== '' && strlen($user_fname) < 100 && $user_lname !== '' && strlen($user_lname) < 100 && $email !== '' && strlen($email) < 100){
+    $comment = new Comment();
+    $comment->insertComment($user_fname, $user_lname, $email, $message);
 }
 
 header('Location: /contact.php');

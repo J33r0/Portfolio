@@ -28,10 +28,12 @@
         </form>
 
         <?php
+        require_once "assets/php/Comment.php";
+        require_once "assets/php/Database.php";
+        
         $commentObj = new Comment();
-        $obj = $commentObj->getComment(); 
 
-        foreach ($obj as $comment) {
+        foreach ($commentObj->getComment() as $comment) {
             ?>
         <article>
         <ul>

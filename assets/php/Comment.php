@@ -25,7 +25,8 @@ class Comment extends Database{
     }
 
     public function getComment() {
-        $stmt = $this->pdo->query("SELECT * FROM message");
-        return $stmt->fetchAll();
+        return ($this->pdo->query("SELECT * FROM message"))->fetchAll();   
     }
 }
+
+?>

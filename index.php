@@ -1,5 +1,37 @@
+<?php
+$lang = 'en';
+
+if (isset($_GET['lang'])) {
+    if ($_GET['lang'] == 'es' || $_GET['lang'] == 'fr' || $_GET['lang'] == 'en') {
+        setcookie(
+            'lang',
+            $_GET['lang'],
+            time() + 60 * 60 * 24 * 365,
+            '',
+            '',
+            true,
+            true
+        );
+        $lang = $_GET['lang'];
+    }
+} else {
+    if (isset($_COOKIE[$lang]) && ($_COOKIE[$lang] == 'es' || $_COOKIE[$lang] == 'fr' || $_COOKIE[$lang] == 'en')) {
+        $lang = $_COOKIE[$lang];
+    }
+}
+
+if ($lang == 'es') {
+    require_once 'assets/local/es.php';
+} elseif ($lang == 'fr') {
+    require_once 'assets/local/fr.php';
+} else {
+    require_once 'assets/local/en.php';
+}
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

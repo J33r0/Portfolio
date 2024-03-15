@@ -24,17 +24,20 @@
 
             <ul>
                 <a href="/">
-                    <li>Home</li>
+                    <li><?= $trad['nav']['home'] ?></li>
                 </a>
                 <a href="/#projects">
-                    <li>Projects</li>
+                    <li><?= $trad['nav']['projects'] ?></li>
                 </a>
                 <a href="/#aboutme">
-                    <li>About Me</li>
+                    <li><?= $trad['nav']['aboutme'] ?></li>
                 </a>
                 <a href="contact.php">
-                    <li>Contact Me</li>
+                    <li><?= $trad['nav']['contactme'] ?></li>
                 </a>
+                <a href="?lang=<?= $lang === 'fr' ? 'en' : 'fr' ?>"><?= $trad['nav']['changeLang'] ?></a></li>
+
+
             </ul>
         </section>
     </nav>

@@ -50,19 +50,22 @@ if ($lang == 'es') {
         </section>
 
         <section id="projects">
-            <div></div>
-            <article></article>
-            <article></article>
-            <div></div>
-            <div></div>
-            <article></article>
-            <article></article>
-            <div></div>
+            <h2>Projects</h2>
+            <section>
+                <div></div>
+                <article></article>
+                <article></article>
+                <div></div>
+                <div></div>
+                <article></article>
+                <article></article>
+                <div></div>
+            </section>
         </section>
 
         <section id="aboutme">
             <h2>About Me</h2>
-            <p>test</p>
+            <p></p> 
         </section>
     </main>
 

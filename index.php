@@ -45,12 +45,12 @@ if ($lang == 'es') {
 
     <main>
         <section>
-            <h1>I'm <span>Jeronimo Herdoiza</span></h1>
-            <h1>A future Engineer and Developper</h1>
+            <h1><?= $trad['main']['im'] ?> <span><?= $trad['main']['jh'] ?></span></h1>
+            <h1><?= $trad['main']['future'] ?></h1>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2><?= $trad['main']['projects'] ?></h2>
             <section>
                 <div></div>
                 <article></article>
@@ -64,8 +64,8 @@ if ($lang == 'es') {
         </section>
 
         <section id="aboutme">
-            <h2>About Me</h2>
-            <p></p> 
+            <h2><?= $trad['main']['aboutme'] ?></h2>
+            <p>test</p> 
         </section>
     </main>
 

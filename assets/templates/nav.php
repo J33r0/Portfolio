@@ -39,8 +39,8 @@
                 <form action="/" method="get">
                     <select name="lang">
                         <option value="en" <?= $lang === 'en' ? 'selected' : '' ?>>English</option>
-                        <option value="fr" <?= $lang === 'fr' ? 'selected' : '' ?>>French</option>
-                        <option value="es" <?= $lang === 'es' ? 'selected' : '' ?>>Spanish</option>
+                        <option value="fr" <?= $lang === 'fr' ? 'selected' : '' ?>>Français</option>
+                        <option value="es" <?= $lang === 'es' ? 'selected' : '' ?>>Español</option>
                     </select>
                 </form>
             </ul>

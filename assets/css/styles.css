@@ -43,7 +43,16 @@ html {
                     align-items: center;
                     gap: 16px;
                     list-style: none;
-
+                    
+                    select {
+                        background-color: #0c0d163b;
+                        color: inherit;
+                        border: none;
+                        
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
                 }
 
                 button {

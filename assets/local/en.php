@@ -1,7 +1,7 @@
 <?php
 
 $trad = [
-    $nav => [
+    "nav" => [
         "home" => "Home",
         "projects" => "Projects",
         "aboutme" => "About Me",

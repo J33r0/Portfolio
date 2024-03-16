@@ -29,11 +29,10 @@
 
         <?php
         require_once "assets/php/Comment.php";
-        require_once "assets/php/Database.php";
         
         $commentObj = new Comment();
 
-        foreach ($commentObj->getComment() as $comment) {
+        foreach ($commentObj->getComments() as $comment) {
             ?>
         <article>
         <ul>

@@ -1,6 +1,6 @@
 <?php
 
-require_once './Database.php';
+require_once 'Database.php';
 
 class Comment extends Database{
     public function __construct() {
@@ -15,7 +15,7 @@ class Comment extends Database{
         )');
     }
 
-    public function insertComment(string $user_fname, string $user_lname, string $email, string $message) {
+    public function insertComment(string $user_fname, string $user_lname, string $email, string $message): void{
         $stmt = $this->pdo->prepare("INSERT INTO message ('user_fname', 'user_lname', 'email', 'message') VALUES (:user_fname, :user_lname, :email, :message)");
         $stmt->bindvalue(':user_fname', $user_fname);
         $stmt->bindvalue(':user_lname', $user_lname);
@@ -24,8 +24,8 @@ class Comment extends Database{
         $stmt->execute();
     }
 
-    public function getComment() {
-        return ($this->pdo->query("SELECT * FROM message"))->fetchAll();   
+    public function getComments(): array {
+        return $this->pdo->query("SELECT * FROM message")->fetchAll();   
     }
 }
 

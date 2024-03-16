@@ -13,6 +13,7 @@ html {
         margin: 0 0;
         background-color: #1d1729;
         color: white;
+        scroll-behavior: smooth;
 
         nav {
             display: flex;
@@ -69,6 +70,7 @@ html {
         }
 
         main {
+
 
             section {
                 height: 100vh;

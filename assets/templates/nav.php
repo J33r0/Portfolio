@@ -34,10 +34,15 @@
                 </a>
                 <a href="contact.php">
                     <li><?= $trad['nav']['contactme'] ?></li>
-                </a>
-                <a href="?lang=<?= $lang === 'fr' ? 'en' : 'fr' ?>"><?= $trad['nav']['changeLang'] ?></a></li>
+                </a>        
 
-
+                <form action="/" method="get">
+                    <select name="lang" onchange="this.form.submit()">
+                        <option value="en" <?= $lang === 'en' ? 'selected' : '' ?>>English</option>
+                        <option value="fr" <?= $lang === 'fr' ? 'selected' : '' ?>>French</option>
+                        <option value="es" <?= $lang === 'es' ? 'selected' : '' ?>>Spanish</option>
+                    </select>
+                </form>
             </ul>
         </section>
     </nav>

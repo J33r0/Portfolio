@@ -41,7 +41,7 @@ if ($lang == 'es') {
     <script src="assets/js/script.js" type="module"></script>
 </head>
 <body>
-    <?php include "assets/templates/nav.php";?>
+    <?php require_once "assets/templates/nav.php";?>
 
     <main>
         <section>

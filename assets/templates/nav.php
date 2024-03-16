@@ -37,7 +37,7 @@
                 </a>        
 
                 <form action="/" method="get">
-                    <select name="lang" onchange="this.form.submit()">
+                    <select name="lang">
                         <option value="en" <?= $lang === 'en' ? 'selected' : '' ?>>English</option>
                         <option value="fr" <?= $lang === 'fr' ? 'selected' : '' ?>>French</option>
                         <option value="es" <?= $lang === 'es' ? 'selected' : '' ?>>Spanish</option>

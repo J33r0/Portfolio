@@ -4,6 +4,8 @@ window.addEventListener('scroll', function() {
     mainSection.style.transform = 'translateY(' + (-scrollPosition / 2) + 'px)';
 });
 
-
+document.querySelector('nav select').addEventListener('change', function() {
+    this.form.submit();
+});
 
 

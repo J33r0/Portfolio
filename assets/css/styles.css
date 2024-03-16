@@ -5,12 +5,12 @@
 
 html {
     font-family: 'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
 
     body {
         margin: 0 0;
         background-color: #1d1729;
         color: white;
-        scroll-snap-type: y mandatory;
 
         nav {
             display: flex;
@@ -19,7 +19,6 @@ html {
             margin: 0;
             padding: 0 16px;
             background-color: #0c0d163b;
-            position:sticky;
 
             a {
                 color: inherit;

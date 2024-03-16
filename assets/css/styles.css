@@ -1,8 +1,5 @@
  :root {
     --decoration-color: #c19cd1;
-    --decoration-color-bg: color-mix(in srgb, var(--decoration-color), rgba(255, 255, 255, 0.1));
-
-    --sm: 960;
 } 
 
 
@@ -13,7 +10,7 @@ html {
         margin: 0 0;
         background-color: #1d1729;
         color: white;
-        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
 
         nav {
             display: flex;
@@ -22,6 +19,7 @@ html {
             margin: 0;
             padding: 0 16px;
             background-color: #0c0d163b;
+            position:sticky;
 
             a {
                 color: inherit;
@@ -76,6 +74,7 @@ html {
                 height: 100vh;
                 width: 100%;
                 margin: 0;
+                
 
                 &:nth-child(1) {
                     display: flex;
@@ -92,20 +91,23 @@ html {
 
                     article {
                         background-color: #fff;
+                        opacity: 0;
+                        transform: translateY(15vh);
+                        visibility: hidden;
+                        transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+                        will-change: opacity, visibility;
                     }
 
-                    @keyframes articleAnimation {
-                        0% {
-                            opacity: 0;
-                        }
-                        100% {
-                            opacity: 1;
-                        }
+                    .show {
+                        opacity: 1;
+                        transform: none;
+                        visibility: visible;
                     }
                 }
 
                 &:nth-child(3) {
                     background-color: #171829;
+                    margin-top: 15vh;
                 }
 
                 h1 {

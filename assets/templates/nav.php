@@ -1,5 +1,5 @@
 <nav>
-        <a href="/" title="Go to home page">
+        <a href="/?lang=<?= $lang ?>" title="Go to home page">
             <img src="assets/img/image2vector.svg" alt="logo" aria-hidden="true"/>
         </a>
 
@@ -23,18 +23,18 @@
             </button>
 
             <ul>
-                <a href="/">
-                    <li><?= $trad['nav']['home'] ?></li>
-                </a>
-                <a href="/#projects">
-                    <li><?= $trad['nav']['projects'] ?></li>
-                </a>
-                <a href="/#aboutme">
-                    <li><?= $trad['nav']['aboutme'] ?></li>
-                </a>
-                <a href="contact.php">
-                    <li><?= $trad['nav']['contactme'] ?></li>
-                </a>        
+                <li>
+                    <a href="/?lang=<?= $lang ?>"><?= $trad['nav']['home'] ?></a>
+                </li>
+                <li>
+                    <a href="/?lang=<?= $lang ?>#projects"><?= $trad['nav']['projects'] ?></a>
+                </li>
+                <li>
+                    <a href="/?lang=<?= $lang ?>#aboutme"><?= $trad['nav']['aboutme'] ?></a>
+                </li>
+                <li>
+                    <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
+                </li> 
 
                 <form action="/" method="get">
                     <select name="lang">

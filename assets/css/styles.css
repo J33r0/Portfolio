@@ -9,7 +9,7 @@ html {
 
     body {
         margin: 0 0;
-        background-color: #1d1729;
+        background-color: #100c16;
         color: white;
 
         nav {
@@ -18,7 +18,7 @@ html {
             align-items: center;
             margin: 0;
             padding: 0 16px;
-            background-color: #0c0d163b;
+            background-color: #100c163b;
 
             a {
                 color: inherit;
@@ -26,6 +26,7 @@ html {
 
                 &:hover {
                     color: var(--decoration-color);
+                    text-decoration: underline;
                 }
 
                 img {
@@ -133,8 +134,24 @@ html {
                 }
 
                 &:nth-child(3) {
-                    background-color: #171829;
-                    margin-top: 15vh;
+                    margin-top: 25vh;
+
+                    h2 {
+                        text-align: center;
+                        font-size: 2em;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-size: 1.25em;
+                        padding: 0 20em;
+                    }
+
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                        font-size: 1em;
+                    }
                 }
 
                 

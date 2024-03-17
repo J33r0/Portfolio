@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><?php
+$lang = 'en'; // Default language
+
+if (isset($_COOKIE['lang']) && ($_COOKIE['lang'] == 'es' || $_COOKIE['lang'] == 'fr' || $_COOKIE['lang'] == 'en')) {
+    $lang = $_COOKIE['lang'];
+}
+
+if ($lang == 'es') {
+    require_once 'assets/local/es.php';
+} elseif ($lang == 'fr') {
+    require_once 'assets/local/fr.php';
+} else {
+    require_once 'assets/local/en.php';
+}
+?>
+
+<!DOCTYPE html>
+<html lang="<?= $lang ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>

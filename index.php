@@ -65,7 +65,13 @@ if ($lang == 'es') {
 
         <section id="aboutme">
             <h2><?= $trad['main']['aboutme'] ?></h2>
-            <p>test</p> 
+            <p><?= $trad['main']['p1'] ?></p> 
+            <p><?= $trad['main']['p2'] ?></p>
+
+            <button>
+                <a href="contact.php"><?= $trad['nav']['contactme'] ?></a>
+            </button>
+            <a href="/?lang=<?= $lang ?>"><?= $trad['nav']['home'] ?></a>
         </section>
     </main>
 

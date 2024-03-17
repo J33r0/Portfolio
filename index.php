@@ -69,7 +69,7 @@ if ($lang == 'es') {
             <p><?= $trad['main']['p2'] ?></p>
 
             <button>
-                <a href="contact.php"><?= $trad['nav']['contactme'] ?></a>
+                <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
             </button>
             <a href="/?lang=<?= $lang ?>"><?= $trad['nav']['home'] ?></a>
         </section>

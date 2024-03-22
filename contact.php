@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><?php
-$lang = 'en'; // Default language
+$lang = 'en';
 
 if (isset($_COOKIE['lang']) && ($_COOKIE['lang'] == 'es' || $_COOKIE['lang'] == 'fr' || $_COOKIE['lang'] == 'en')) {
     $lang = $_COOKIE['lang'];
@@ -29,6 +29,8 @@ if ($lang == 'es') {
 
     <main>
         <form action="assets/php/form.php" method="post" >
+            <h1>Fill this out to contact me!</h1>
+
             <label for="user_fname">Your first name:</label>
             <input type="text" id="user_fname" name="user_fname"/>
 
@@ -43,26 +45,6 @@ if ($lang == 'es') {
 
             <button type="submit"> Send your message</button>
         </form>
-
-        <?php
-        require_once "assets/php/Comment.php";
-        
-        $commentObj = new Comment();
-
-        foreach ($commentObj->getComments() as $comment) {
-            ?>
-        <article>
-        <ul>
-            <li><?php echo $comment['id'] ?></li>
-            <li><?= $comment['user_fname'] ?></li>
-            <li><?= $comment['user_lname'] ?></li>
-            <li><?= $comment['email'] ?></li>
-            <li><?= $comment['message'] ?></li>
-        </ul>
-        </article>
-        <?php
-        }
-        ?>
     </main>
 
     <?php require_once "assets/templates/footer.php";?>

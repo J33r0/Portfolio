@@ -1,5 +1,6 @@
  :root {
     --decoration-color: #c19cd1;
+    --decoration-color-dark: #b474cf;
 } 
 
 
@@ -16,7 +17,7 @@ html {
         margin: 0 0;
         background-color: #100c16;
         color: white;
-
+        
         nav {
             display: flex;
             justify-content: space-between;
@@ -186,6 +187,69 @@ html {
                 }
 
                 
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin: 0 auto;
+                width: 40%;
+                padding: 16px;
+                background-color: #0c0d163b;
+                border-radius: 8px;
+
+                @media screen and (max-width: 720px) {
+                    width: 80%;
+                }
+
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    font-size: 1.25rem;
+                    cursor: pointer;
+                }
+
+                input {
+                    padding: 8px;
+                    border: none;
+                    background-color: #0c0d163b;
+                    border-bottom: 1px solid white;
+                    color: white;
+                    font-size: 1rem;
+
+                    &:focus {
+                        outline: none;
+                        border-bottom: 1px solid var(--decoration-color-dark);}
+                }
+
+                textarea {
+                    padding: 8px;
+                    border: none;
+                    background-color: #0c0d163b;
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 1rem;
+                    height: 10rem;
+
+                    &:focus {
+                        outline: none;
+                        border-bottom: 1px solid var(--decoration-color-dark);}
+                }
+
+                button {
+                    padding: 8px;
+                    background-color: var(--decoration-color);
+                    color: black;
+                    border: none;
+                    font-size: 1rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--decoration-color-dark);
+                    }
+                }
             }
             
         }

@@ -71,7 +71,6 @@ if ($lang == 'es') {
             <button>
                 <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
             </button>
-            <a href="/?lang=<?= $lang ?>"><?= $trad['nav']['home'] ?></a>
         </section>
     </main>
 

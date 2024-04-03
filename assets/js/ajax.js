@@ -10,7 +10,7 @@ async function loadProjects() {
         container.insertAdjacentHTML(
             'beforeend', 
             `<div></div>
-            <a href="project.php?id=${project.id}">
+            <a href="project.php?id=${project.id}&lang=${lang}">
                 <article>
                     <h2>${project.title}</h2>
                     <img src="${project.img_path}" alt="project image"/>
@@ -30,6 +30,13 @@ async function loadProjects() {
     }
 
     console.log(projects);
+}
+
+let lang = 'en';
+if (new URLSearchParams(window.location.search).has('lang')) {
+    lang = new URLSearchParams(window.location.search).get('lang');
+} else if (document.cookie.split('; ').find(row => row.startsWith('lang='))) {
+    lang = document.cookie.split('; ').find(row => row.startsWith('lang=')).split('=')[1];
 }
 
 document.querySelector('#projects button').addEventListener('click', loadProjects);

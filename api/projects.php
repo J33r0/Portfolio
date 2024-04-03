@@ -1,11 +1,11 @@
 <?php
 
-require_once '../assets/php/Database.php';
+require_once '../assets/php/Project.php';
 
-$database = new Database();
+$database = new Project();
 $pdo = $database->getPdo();
 
-$projects = $pdo->query('SELECT * FROM projects')->fetchAll();
+$projects = $database->getProjects();
 
 header('Content-Type: application/json');
 echo json_encode($projects);

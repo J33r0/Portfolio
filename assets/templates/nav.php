@@ -36,7 +36,7 @@
                     <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
                 </li> 
 
-                <form action="/" method="get">
+                <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="get">
                     <select name="lang">
                         <option value="en" <?= $lang === 'en' ? 'selected' : '' ?>>English</option>
                         <option value="fr" <?= $lang === 'fr' ? 'selected' : '' ?>>Français</option>

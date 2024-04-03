@@ -8,8 +8,7 @@ document.querySelector('nav select').addEventListener('change', function() {
     this.form.submit();
 });
 
-
-window.addEventListener('scroll', function() {
+export function fadeInScroll() {
     let articles = document.querySelectorAll('#projects article');
     for (let i = 0; i < articles.length; i++) {
         let article = articles[i];
@@ -19,5 +18,7 @@ window.addEventListener('scroll', function() {
         } else {
             article.classList.remove('show');
         }
-    }        
-});
+    }      
+}
+
+window.addEventListener('scroll', fadeInScroll);

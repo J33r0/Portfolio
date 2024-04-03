@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><?php
+<?php
 $lang = 'en';
 
-if (isset($_COOKIE['lang']) && ($_COOKIE['lang'] == 'es' || $_COOKIE['lang'] == 'fr' || $_COOKIE['lang'] == 'en')) {
-    $lang = $_COOKIE['lang'];
+if(isset($_GET['lang']) && ($_GET['lang'] == 'es' || $_GET['lang'] == 'fr' || $_GET['lang'] == 'en')) {
+    $lang = $_GET['lang'];
+} else {
+    if (isset($_COOKIE['lang']) && ($_COOKIE['lang'] == 'es' || $_COOKIE['lang'] == 'fr' || $_COOKIE['lang'] == 'en')) {
+        $lang = $_COOKIE['lang'];
+    }
 }
 
 if ($lang == 'es') {
@@ -20,7 +22,7 @@ if ($lang == 'es') {
 <html lang="<?= $lang ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title><?= $trad['nav']['contactme'] ?></title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
 </head>
@@ -29,21 +31,21 @@ if ($lang == 'es') {
 
     <main>
         <form action="assets/php/form.php" method="post" >
-            <h1>Fill this out to contact me!</h1>
+            <h1><?= $trad['form']['title'] ?></h1>
 
-            <label for="user_fname">Your first name:</label>
+            <label for="user_fname"><?= $trad['form']['fname'] ?></label>
             <input type="text" id="user_fname" name="user_fname"/>
 
-            <label for="user_lname">Your last name:</label>
+            <label for="user_lname"><?= $trad['form']['lname'] ?></label>
             <input type="text" id="user_lname" name="user_lname"/>
 
-            <label for="email">Your e-mail:</label>
+            <label for="email"><?= $trad['form']['email'] ?></label>
             <input type="email" id="email" name="email"/>
 
-            <label for="message">Your message:</label>
+            <label for="message"><?= $trad['form']['message'] ?></label>
             <textarea id="message" name="message"></textarea>
 
-            <button type="submit"> Send your message</button>
+            <button type="submit"><?= $trad['form']['send'] ?></button>
         </form>
     </main>
 

@@ -39,6 +39,7 @@ if ($lang == 'es') {
     <title>Jeronimo Herdoiza</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
     <script src="assets/js/script.js" type="module"></script>
+    <script src="assets/js/ajax.js" type="module"></script>
 </head>
 <body>
     <?php require_once "assets/templates/nav.php";?>
@@ -59,8 +60,9 @@ if ($lang == 'es') {
                 <div></div>
                 <article></article>
                 <article></article>
-                <div></div>
+
             </section>
+            <button>See more</button>
         </section>
 
         <section id="aboutme">

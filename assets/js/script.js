@@ -22,3 +22,7 @@ export function fadeInScroll() {
 }
 
 window.addEventListener('scroll', fadeInScroll);
+
+window.addEventListener('load', function() {
+    window.dispatchEvent(new Event('scroll'));
+}); 

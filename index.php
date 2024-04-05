@@ -79,7 +79,7 @@ if ($lang == 'es') {
                 <?php endforeach; ?>
 
             </section>
-            <button>See more</button>
+            <button><?= $trad['main']['seemore'] ?></button>
         </section>
 
         <section id="aboutme">

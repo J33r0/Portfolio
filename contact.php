@@ -24,7 +24,7 @@ if ($lang == 'es') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $trad['nav']['contactme'] ?></title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/initials.svg"/>
 
     <script src="assets/js/script.js" type="module"></script>
 </head>
@@ -47,7 +47,7 @@ if ($lang == 'es') {
             <label for="message"><?= $trad['form']['message'] ?></label>
             <textarea id="message" name="message"></textarea>
 
-            <button type="submit" class="button_style"><?= $trad['form']['send'] ?></button>
+            <button type="submit"><?= $trad['form']['send'] ?></button>
         </form>
     </main>
 

@@ -5,7 +5,6 @@ async function loadProjects() {
     const response = await fetch('api/projects.php');
     const projects = await response.json();
 
-    let lastArticle; 
     projects.forEach((project) => {
         container.insertAdjacentHTML(
             'beforeend', 
@@ -17,17 +16,9 @@ async function loadProjects() {
                 </a>
             </article>`
         );
-
-        lastArticle = container.lastElementChild.previousElementSibling;
     })
 
     fadeInScroll();
-
-    if (lastArticle) {
-        lastArticle.scrollIntoView({ behavior : 'smooth' });
-    }
-
-    console.log(projects);
 }
 
 let lang = 'en';
@@ -37,4 +28,7 @@ if (new URLSearchParams(window.location.search).has('lang')) {
     lang = document.cookie.split('; ').find(row => row.startsWith('lang=')).split('=')[1];
 }
 
-document.querySelector('#projects button').addEventListener('click', loadProjects);
+document.querySelector('#projects button').addEventListener('click', loadProjects)
+document.querySelector('#projects button').addEventListener('click', function() {
+    document.querySelector('#projects button').remove();
+})

@@ -32,6 +32,7 @@ html {
             z-index: 1000;
 
             a {
+                margin-top: 12px;
                 color: inherit;
                 text-decoration: none;
 
@@ -41,7 +42,17 @@ html {
                 }
 
                 img {
-                    width: 25%;
+                    width: 30%;
+
+                    @media screen and (max-width: 960px) {
+                        width: 50%;
+                        
+                    }
+
+                    @media screen and (max-width: 720px) {
+                        width: 75%;
+                        
+                    }
                 }
             }
 
@@ -90,10 +101,10 @@ html {
 
         main {
 
-            .button_style {
+            button {
                 display: block;
                 box-sizing: border-box;
-                border: 2px solid white;
+                border: 2px solid var(--decoration-color);
                 border-radius: 0.75em;
                 padding: 0.75em 1.5em;
                 background: var(--decoration-color-dark);
@@ -104,10 +115,12 @@ html {
     
                 &:hover {
                     transform: translateY(-0.33em);
+                    box-shadow: 0 0 5px var(--decoration-color), 0 0 10px var(--decoration-color), 0 0 15px var(--decoration-color), 0 0 20px var(--decoration-color);
                 }
     
                 &:active {
                     transform: translateY(0);
+                    box-shadow: 0 0 10px var(--decoration-color), 0 0 20px var(--decoration-color), 0 0 30px var(--decoration-color), 0 0 40px var(--decoration-color);
                 }
             }
 
@@ -160,7 +173,8 @@ html {
                         }
 
                         article {
-                            background-color: #fff;
+                            margin: 2em 3em;
+                            background-color: #e3dac9;
                             color: black;
                             opacity: 0;
                             transform: translateY(15vh);
@@ -168,6 +182,9 @@ html {
                             transition: opacity 0.6s ease-out, transform 1.2s ease-out;
                             will-change: opacity, visibility;
                             z-index: 10;
+                            border-radius: 0.75em;
+                            box-shadow: 0 2px 5px rgba(227, 218, 201, 0.6);
+                            padding: 1.5em;
 
                             h3 {
                                 color: black;
@@ -181,8 +198,8 @@ html {
                             }
 
                             img {
-                                width: 50%;
-                                height: auto;
+                                /* width: 50%; */
+                                height: 25vh;
                             }
                         }
     

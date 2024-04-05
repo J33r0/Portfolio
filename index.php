@@ -37,7 +37,7 @@ if ($lang == 'es') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Jeronimo Herdoiza</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/image2vector.svg"/>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/initials.svg"/>
     <script src="assets/js/script.js" type="module"></script>
     <script src="assets/js/ajax.js" type="module"></script>
 </head>
@@ -79,7 +79,7 @@ if ($lang == 'es') {
                 <?php endforeach; ?>
 
             </section>
-            <button class="button_style">See more</button>
+            <button>See more</button>
         </section>
 
         <section id="aboutme">
@@ -87,7 +87,7 @@ if ($lang == 'es') {
             <p><?= $trad['main']['p1'] ?></p> 
             <p><?= $trad['main']['p2'] ?></p>
 
-            <button class="button_style">
+            <button>
                 <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
             </button>
         </section>

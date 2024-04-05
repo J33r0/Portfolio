@@ -53,13 +53,30 @@ if ($lang == 'es') {
         <section id="projects">
             <h2><?= $trad['main']['projects'] ?></h2>
             <section>
-                <div></div>
-                <article></article>
-                <article></article>
-                <div></div>
-                <div></div>
-                <article></article>
-                <article></article>
+
+                <?php
+                require_once 'assets/php/Project.php';
+                
+                if (session_status() == PHP_SESSION_NONE) session_start();
+                unset($_SESSION['projects_ids']);
+
+                $project = new Project();
+                $pdo = $project->getPdo();
+
+                $projects = $project->getRandomProjects();
+
+                $fourProjects = array_slice($projects, 0, 4);
+
+                foreach ($fourProjects as $project):
+                    ?>
+                    <article>
+                        <a href="project.php?lang=<?= $lang ?>&id=<?=$project['id']?>">
+                            <h3><?= $project['title'] ?></h3>
+                            <img src="<?= $project['img_path'] ?>" alt="">
+                            <p><?= $project['description'] ?></p>
+                        </a>
+                    </article>
+                <?php endforeach; ?>
 
             </section>
             <button>See more</button>

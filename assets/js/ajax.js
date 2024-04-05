@@ -9,15 +9,13 @@ async function loadProjects() {
     projects.forEach((project) => {
         container.insertAdjacentHTML(
             'beforeend', 
-            `<div></div>
-            <a href="project.php?id=${project.id}&lang=${lang}">
-                <article>
+            `<article>
+            <a href="project.php?lang=${lang}&id=${project.id}">
                     <h2>${project.title}</h2>
                     <img src="${project.img_path}" alt="project image"/>
                     <p>${project.description}</p>
-                </article>
-            </a>
-            <div></div>`
+                </a>
+            </article>`
         );
 
         lastArticle = container.lastElementChild.previousElementSibling;

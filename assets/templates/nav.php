@@ -1,6 +1,6 @@
 <nav>
         <a href="/?lang=<?= $lang ?>" title="Go to home page">
-            <img src="assets/img/image2vector.svg" alt="logo" aria-hidden="true"/>
+            <img src="assets/img/logo2-white.svg" alt="logo" aria-hidden="true"/>
         </a>
 
         <div></div>

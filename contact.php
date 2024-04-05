@@ -47,7 +47,7 @@ if ($lang == 'es') {
             <label for="message"><?= $trad['form']['message'] ?></label>
             <textarea id="message" name="message"></textarea>
 
-            <button type="submit"><?= $trad['form']['send'] ?></button>
+            <button type="submit" class="button_style"><?= $trad['form']['send'] ?></button>
         </form>
     </main>
 

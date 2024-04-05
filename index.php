@@ -79,7 +79,7 @@ if ($lang == 'es') {
                 <?php endforeach; ?>
 
             </section>
-            <button>See more</button>
+            <button class="button_style">See more</button>
         </section>
 
         <section id="aboutme">
@@ -87,7 +87,7 @@ if ($lang == 'es') {
             <p><?= $trad['main']['p1'] ?></p> 
             <p><?= $trad['main']['p2'] ?></p>
 
-            <button>
+            <button class="button_style">
                 <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
             </button>
         </section>

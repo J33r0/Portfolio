@@ -23,6 +23,27 @@ export function fadeInScroll() {
 
 window.addEventListener('scroll', fadeInScroll);
 
-window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
+//     window.dispatchEvent(new Event('scroll'));
+// }); 
+
+window.onload = function() {
     window.dispatchEvent(new Event('scroll'));
-}); 
+
+    let searchField = document.getElementById('searchProject');
+    let form = document.querySelector('#projects form');
+    let seemoreButton = document.querySelector('#projects button');
+    
+    searchField.addEventListener('input', function() {
+        let params = new URLSearchParams(window.location.search);
+
+        if (searchField.value) {
+            params.set('searchProject', searchField.value);
+        }
+        else {
+            params.delete('searchProject');
+        }
+        
+        history.replaceState({}, '', window.location.pathname + '?' + params);
+    }); 
+};

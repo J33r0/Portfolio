@@ -29,12 +29,13 @@ if ($lang == 'es') {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Project : <?= $project['title'] ?></title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/project.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/initials.svg"/>
 
     <script src="assets/js/script.js" type="module"></script>

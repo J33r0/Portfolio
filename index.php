@@ -63,9 +63,16 @@ if ($lang == 'es') {
                 $project = new Project();
                 $pdo = $project->getPdo();
 
-                $projects = $project->getRandomProjects();
+                $searchTerm = $_GET['searchProject'] ?? '';
 
-                $fourProjects = array_slice($projects, 0, 4);
+                if ($searchTerm) {
+                    $projects = $project->searchProject($searchTerm);
+                    $fourProjects = $projects;
+
+                } else {
+                    $projects = $project->getRandomProjects();
+                    $fourProjects = array_slice($projects, 0, 4);
+                }
 
                 foreach ($fourProjects as $project):
                     ?>
@@ -79,7 +86,16 @@ if ($lang == 'es') {
                 <?php endforeach; ?>
 
             </section>
-            <button><?= $trad['main']['seemore'] ?></button>
+            <?php if ($searchTerm === ''): ?>
+            <button id="see-more"><?= $trad['main']['seemore'] ?></button>
+            <?php endif ?>
+            
+            <form action="index.php" method="get">
+                <input type="hidden" name="lang" value="<?= $lang ?>">
+                <label for="searchProject">Cherchez des projets par nom :</label>
+                <input type="search" id="searchProject" name="searchProject">
+                <button type="submit">Cercher</button>
+            </form>
         </section>
 
         <section id="aboutme">

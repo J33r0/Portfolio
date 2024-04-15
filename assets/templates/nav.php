@@ -8,16 +8,16 @@
         <section>
             <ul>
                 <li>
-                    <a href="/?lang=<?= $lang ?>"><?= $trad['nav']['home'] ?></a>
+                    <a href="/?lang=<?= $lang ?>" class="hover-style"><?= $trad['nav']['home'] ?></a>
                 </li>
                 <li>
-                    <a href="/?lang=<?= $lang ?>#projects"><?= $trad['nav']['projects'] ?></a>
+                    <a href="/?lang=<?= $lang ?>#projects" class="hover-style"><?= $trad['nav']['projects'] ?></a>
                 </li>
                 <li>
-                    <a href="/?lang=<?= $lang ?>#aboutme"><?= $trad['nav']['aboutme'] ?></a>
+                    <a href="/?lang=<?= $lang ?>#aboutme" class="hover-style"><?= $trad['nav']['aboutme'] ?></a>
                 </li>
                 <li>
-                    <a href="contact.php?lang=<?= $lang ?>"><?= $trad['nav']['contactme'] ?></a>
+                    <a href="contact.php?lang=<?= $lang ?>" class="hover-style"><?= $trad['nav']['contactme'] ?></a>
                 </li> 
 
                 <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="get">

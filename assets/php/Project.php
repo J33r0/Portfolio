@@ -39,4 +39,10 @@ class Project extends Database{
 
         return $projects;
     }
+
+    public function searchProject(string $searchTerm): array {
+        $stmt = $this->pdo->prepare("SELECT * FROM projects WHERE title LIKE :searchTerm");
+        $stmt->execute(['searchTerm' => "%$searchTerm%"]);
+        return $stmt->fetchAll();
+    }
 }

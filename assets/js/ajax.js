@@ -28,7 +28,7 @@ if (new URLSearchParams(window.location.search).has('lang')) {
     lang = document.cookie.split('; ').find(row => row.startsWith('lang=')).split('=')[1];
 }
 
-document.querySelector('#projects button').addEventListener('click', loadProjects)
-document.querySelector('#projects button').addEventListener('click', function() {
-    document.querySelector('#projects button').remove();
+document.querySelector('#see-more').addEventListener('click', loadProjects)
+document.querySelector('#see-more').addEventListener('click', function() {
+    document.querySelector('#see-more').remove();
 })

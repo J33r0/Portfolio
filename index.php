@@ -93,8 +93,8 @@ if ($lang == 'es') {
             <form action="index.php" method="get">
                 <input type="hidden" name="lang" value="<?= $lang ?>">
                 <label for="searchProject">Cherchez des projets par nom :</label>
-                <input type="search" id="searchProject" name="searchProject">
-                <button type="submit">Cercher</button>
+                <input type="search" name="searchProject" id="searchProject">
+                <button type="submit">Chercher</button>
             </form>
         </section>
 

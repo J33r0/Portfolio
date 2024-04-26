@@ -7,17 +7,17 @@ document.querySelector('main form').addEventListener('submit', function(event) {
 
     let emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;;
 
-    if(!userFname || userFname.trim() === '') {
+    if(!userFname || userFname.trim() === '' || userFname.length > 100) {
         alert('Please enter your first name.');
         event.preventDefault();
     }
 
-    else if(!userLname || userLname.trim() === '') {
+    else if(!userLname || userLname.trim() === '' || userLname.length > 100) {
         alert('Please enter your last name.');
         event.preventDefault();
     }
 
-    else if(!email || email.trim() === '') {
+    else if(!email || email.trim() === '' || email.length > 100) {
         alert('Please enter your email address.');
         event.preventDefault();
     }

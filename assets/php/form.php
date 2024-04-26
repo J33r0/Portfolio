@@ -8,9 +8,8 @@ $email = htmlspecialchars($_POST['email']);
 $message = htmlspecialchars($_POST['message']);
 
 
-if ($message !== '' && $user_fname !== '' && strlen($user_fname) < 100 && $user_lname !== '' && strlen($user_lname) < 100 && $email !== '' && strlen($email) < 100){
+if ($message !== '' && $user_fname !== '' && strlen($user_fname) < 100 && $user_lname !== '' && strlen($user_lname) < 100 && $email !== '' && strlen($email) < 100 && filter_var($email, FILTER_VALIDATE_EMAIL) && $message !== ''){
     $comment = new Comment();
-    $project = new Project();
     $comment->insertComment($user_fname, $user_lname, $email, $message);
 }
 

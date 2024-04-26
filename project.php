@@ -37,6 +37,8 @@ if ($lang == 'es') {
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/project.css">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/initials.svg"/>
+
+    <script src="assets/js/script.js" type="module"></script>
 </head>
 <body>
     <?php include "assets/templates/nav.php";?>

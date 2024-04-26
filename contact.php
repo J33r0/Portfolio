@@ -27,6 +27,7 @@ if ($lang == 'es') {
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/initials.svg"/>
 
     <script src="assets/js/validation.js" type="module"></script>
+    <script src="assets/js/script.js" type="module"></script>
 </head>
 <body>
     <?php require_once "assets/templates/nav.php";?>

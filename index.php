@@ -66,11 +66,11 @@ if ($lang == 'es') {
                 $searchTerm = $_GET['searchProject'] ?? '';
 
                 if ($searchTerm) {
-                    $projects = $project->searchProject($searchTerm);
+                    $projects = $project->searchProject($searchTerm, $lang);
                     $fourProjects = $projects;
 
                 } else {
-                    $projects = $project->getRandomProjects();
+                    $projects = $project->getRandomProjects($lang);
                     $fourProjects = array_slice($projects, 0, 4);
                 }
 

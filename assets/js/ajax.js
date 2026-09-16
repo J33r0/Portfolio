@@ -2,7 +2,7 @@ import { fadeInScroll } from './script.js';
 
 async function loadProjects() {
     const container = document.querySelector('#projects section');
-    const response = await fetch('api/api.php');
+    const response = await fetch(`api/api.php?lang=${lang}`);
     const projects = await response.json();
 
     projects.forEach((project) => {
